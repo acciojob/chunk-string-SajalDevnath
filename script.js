@@ -1,5 +1,6 @@
 function stringChop(str, size) {
-  if (str === null) return [];
+  if (str === null || size <= 0) return [];
+
   const chunks = [];
   for (let i = 0; i < str.length; i += size) {
     chunks.push(str.slice(i, i + size));
